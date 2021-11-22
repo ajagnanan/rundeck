@@ -18,13 +18,13 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v5.6
       with:
         # Name of the Docker image
-        image: rundeck
+        image: ajagnanan/rundeck
         # Tags override for Docker image
         tags: 3.4.6
         # Target Docker registry
         registry: registry.hub.docker.com
         # Location of Dockerfile, if not Dockerfile in root directory
-        dockerfile: Dockerfile
+        #dockerfile: Dockerfile
         # Directory to run `docker build` from, if not project root
         #directory: .
         # Docker build arguments passed via --build-arg
