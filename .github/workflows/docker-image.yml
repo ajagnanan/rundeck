@@ -1,0 +1,46 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Docker Build & Push Action
+      # You may pin to the exact commit or the version.
+      # uses: mr-smithers-excellent/docker-build-push@a7fe6652db5c7274374844e81692992f5a2befb9
+      uses: mr-smithers-excellent/docker-build-push@v5.6
+      with:
+        # Name of the Docker image
+        image: rundeck
+        # Tags override for Docker image
+        tags: 3.4.6
+        # Target Docker registry
+        registry: registry.hub.docker.com
+        # Location of Dockerfile, if not Dockerfile in root directory
+        dockerfile: Dockerfile
+        # Directory to run `docker build` from, if not project root
+        directory: .
+        # Docker build arguments passed via --build-arg
+        #buildArgs: # optional
+        # Docker build labels passed via --label
+        #labels: # optional
+        # Docker build target passed via --target
+        #target: # optional
+        # Docker registry username
+        username: # optional
+        # Docker registry password
+        password: # optional
+        # GitHub organization to push image to (if not current)
+        #gitHubOrg: # optional
+        # Adds latest tag to auto-generated GitOps tag
+        addLatest: true
+        # Suffixes a build timestamp to the branch-based Docker tag
+        #addTimestamp: # optional, default is false
+      
