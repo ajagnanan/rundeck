@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+  rundeck:
+    image: ajagnanan/rundeck:3.4.6
+    build: ./
