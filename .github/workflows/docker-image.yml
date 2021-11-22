@@ -27,5 +27,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ajagnanan/rundeck:3.4.6
+          tags: ajagnanan/rundeck:latest,ajagnanan/rundeck:3.4.6
           
