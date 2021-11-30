@@ -17,3 +17,5 @@ ADD ./supervisord/apache2.conf /etc/supervisor/conf.d/apache2.conf
 ADD ./apache2/conf.d/rundeck-oidc.conf /etc/apache2/conf-enabled/rundeck-oidc.conf
 
 ADD ./rundeck/rundeck-config.properties /opt/rundeck-defaults/rundeck-config.properties
+
+EXPOSE 8080
