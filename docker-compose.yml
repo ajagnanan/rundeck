@@ -4,3 +4,9 @@ services:
   rundeck:
     image: ajagnanan/rundeck:3.4.6
     build: ./
+    ports:
+      - 4440:4440
+      - 4443:4443
+      - 80:80
+    environment:
+      - name=value
